@@ -2,37 +2,68 @@
 
 {% block content %}
 <h1 class="title">
-  {{ page.title }}
+    {{ page.title }}
 </h1>
 <p class="subtitle">{{ page.description }} | {{ page.date | date(format="%B %d, %Y") }}</p>
 <hr>
 {% if page.toc %}
-    <ol>
+<ol>
     {% for h1 in page.toc %}
-        <li>
-            <a href="{{ h1.permalink | safe }}">{{ h1.title }}</a>
-            {% if h1.children %}
-                <ul style="list-style-type: lower-alpha">
-                    {% for h2 in h1.children %}
-                        <li>
-                            <a href="{{ h2.permalink | safe }}">{{ h2.title }}</a>
-                            {% if h2.children %}
-                                <ul style="list-style-type: lower-roman">
-                                    {% for h3 in h2.children %}
-                                        <li>
-                                            <a href="{{ h3.permalink | safe }}">{{ h3.title }}</a>
-                                        </li>
-                                    {% endfor %}
-                                </ul>
-                            {% endif %}
-                        </li>
+    <li>
+        <a href="{{ h1.permalink | safe }}">{{ h1.title }}</a>
+        {% if h1.children %}
+        <ul style="list-style-type: lower-alpha">
+            {% for h2 in h1.children %}
+            <li>
+                <a href="{{ h2.permalink | safe }}">{{ h2.title }}</a>
+                {% if h2.children %}
+                <ul style="list-style-type: lower-roman">
+                    {% for h3 in h2.children %}
+                    <li>
+                        <a href="{{ h3.permalink | safe }}">{{ h3.title }}</a>
+                    </li>
                     {% endfor %}
                 </ul>
-            {% endif %}
-        </li>
+                {% endif %}
+            </li>
+            {% endfor %}
+        </ul>
+        {% endif %}
+    </li>
     {% endfor %}
-    </ol>
+</ol>
 {% endif %}
 
 {{ page.content | safe }}
+
+<script>
+    document.addEventListener('DOMContentLoaded', (_event) => {
+        const references = document.getElementsByClassName('footnote-reference')
+        // For each footnote reference, set an id so we can refer to it from the definition.
+        // If the definition had an id of 'some_id', then the reference has id `some_id_ref`.
+        for (const reference of references) {
+            const link = reference.firstChild
+            const id = link.getAttribute('href').slice(1) // skip the '#'
+            link.setAttribute('id', `${id}_ref`)
+        }
+
+        const footnotes = document.getElementsByClassName('footnote-definition')
+        // For each footnote-definition, add an anchor element with an href to its corresponding reference.
+        // The text used for the added anchor is 'Leftwards Arrow with Hook' (U+21A9).
+        for (const footnote of footnotes) {
+            const id = footnote.getAttribute('id')
+            const backReference = document.createElement('a')
+            backReference.setAttribute('href', `#${id}_ref`)
+            backReference.textContent = '↩'
+            let p = footnote;
+            for (const child of footnote.children) {
+                if (child.tagName == "P") {
+                    p = child;
+                    break;
+                }
+            }
+            p.append(backReference)
+        }
+    });
+</script>
 {% endblock content %}
