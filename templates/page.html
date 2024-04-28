@@ -7,6 +7,7 @@
 <p class="subtitle">{{ page.description }} | {{ page.date | date(format="%B %d, %Y") }}</p>
 <hr>
 {% if page.toc %}
+<h4>Table of Contents</h4>
 <ol>
     {% for h1 in page.toc %}
     <li>
@@ -32,6 +33,7 @@
     </li>
     {% endfor %}
 </ol>
+<hr>
 {% endif %}
 
 {{ page.content | safe }}
