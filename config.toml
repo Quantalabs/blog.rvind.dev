@@ -1,13 +1,13 @@
 base_url = "https://quantalabs.github.io"
 compile_sass = true
 build_search_index = true
-generate_feed = true
+generate_feeds = true
 title = "Tangents"
 description = "A blog on computer science, mathematics, music, and various other things."
 
 author = "npm.quantalabs@gmail.com (Arvind Venkatesh)"
 
-feed_filename = "rss.xml"
+feed_filenames = ["rss.xml"]
 
 [search]
 # Whether to include the title of the page/section in the index
