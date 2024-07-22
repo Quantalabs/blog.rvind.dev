@@ -18,12 +18,24 @@
   <meta content="width=device-width, initial-scale=1" name="viewport" />
 
   {% block rss %}
-    <link rel="alternate" 
-          type="application/rss+xml" 
-          title="RSS" 
-          href="{{ get_url(path='rss.xml', trailing_slash=false) }}">
+  <link rel="alternate" type="application/rss+xml" title="RSS"
+    href="{{ get_url(path='rss.xml', trailing_slash=false) }}">
   {% endblock %}
 
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css"
+    integrity="sha384-nB0miv6/jRmo5UMMR1wu3Gz6NLsoTkbqJghGIsx//Rlm+ZU03BU6SQNC66uf4l5+" crossorigin="anonymous">
+
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"
+    integrity="sha384-7zkQWkzuo3B5mTepMUcHkMB5jZaolc2xDwL6VFqjFALcbeS9Ggm/Yr2r3Dy4lfFg"
+    crossorigin="anonymous"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/contrib/mathtex-script-type.min.js"
+    integrity="sha384-zWYbd0NBwgTsgIdFKVprSfTh1mbMPe5Hz1X3yY4Sd1h/K1cQoUe36OGwAGz/PcDy"
+    crossorigin="anonymous"></script>
+
+
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"
+    integrity="sha384-43gviWU0YVjaDtb/GhzOouOXtZMP/7XUzwPTstBeZFe/+rCMvRwr4yROQP43s0Xk" crossorigin="anonymous"
+    onload="renderMathInElement(document.body);"></script>
 
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap');
@@ -39,6 +51,10 @@
         "wdth" 100;
 
       background-color: var(--white);
+    }
+
+    strong {
+      font-weight: 900 !important;
     }
 
     .greek {
@@ -227,7 +243,7 @@
     </div>
   </main>
   <div class="footer">
-    <div>&copy; 2022 Arvind Venkatesh</div>
+    <div>&copy; 2024 Arvind Venkatesh</div>
   </div>
 
   <script type="text/javascript" src="{{ get_url(path='elasticlunr.min.js') }}"></script>
