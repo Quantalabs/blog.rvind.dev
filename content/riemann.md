@@ -81,7 +81,7 @@ Let's take a look at an example. Say we see the following progression in a piece
 
 "Functionally," (i.e. analyzing the chords in relation to the key) we'd analyze this as a \\(I-iii\\) progression. But, let's look at the transformation that is taking place. We are changing one note and moving it down a half step: C moves down to B. In some forms of transformational theory, this is called a leading tone exchange.
 
-The obvious question is: how can we rigorously define these transformations? Before we get to defining these transformations for chords, let's think of transformations we can perform with the notes of the chromatic scale. For instance, we could have a transformation that makes a key go up by 6 notes. Let's call it \\(T_{6}\\). We could have this transformation for any \\(n\\) keys, so we can define the operation \\(T_{n}\\) to represent moving 6 keys up the chromatic scale.
+The obvious question is: how can we rigorously define these transformations? Before we get to defining these transformations for chords, let's think of transformations we can perform with the notes of the chromatic scale. For instance, we could have a transformation that makes a key go up by 6 notes. Let's call it \\(T_{6}\\). We could have this transformation for any \\(n\\) keys, so we can define the operation \\(T_{n}\\) to represent moving $n$ keys up the chromatic scale.
 
 What are some properties of this transformation? We know:
 
