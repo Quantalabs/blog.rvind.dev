@@ -245,9 +245,12 @@ Using a combination of $PLR$ operations and $T$ operations[^4] can help you unco
 ---
 
 [^1]: Many mathematicians joke that we name everything after the second person who discovered something, because Euler discovered it first. The Tonnetz might not be named after anyone, but it was created by Euler as well.
+
 [^2]: We could also think of the piece as being in A minor, but then the G# minor and A major chords are hard to explain.
+
 [^3]: Chromatic mediants can also be found through other transformations. $PR$, $PL$, and $RP$ can also transform a chord into one of its chromatic mediants.
-[^4]: We didn't talk about $I$ operations (inversions) in this post, but together with $T$ operations, it forms the T/I-group, which is just as important as the PLR group. You can read about them (along with some other important information) [here](https://www-personal.umd.umich.edu/~tmfiore/1/mathmusiccolloquiumslides.pdf)
+
+[^4]: We didn't talk about $I$ operations (inversions) in this post, but together with $T$ operations, it forms the T/I-group, which is just as important as the PLR group. You can read about them (along with some other important information) [here](https://www-personal.umd.umich.edu/~tmfiore/1/mathmusiccolloquiumslides.pdf).
 
 <script src="https://cdn.jsdelivr.net/npm/vexflow@4.2.2/build/cjs/vexflow.js"></script>
 <script src="https://cdn.jsdelivr.net/combine/npm/tone@14.7.58,npm/@magenta/music@1.23.1/es6/core.js,npm/focus-visible@5,npm/html-midi-player@1.5.0"></script>
