@@ -98,17 +98,17 @@ So we have an identity element, an inverse, and associativity: we have a group! 
 
 Now that we can define these transformations for a single note, let's see how we can generalize this to apply to any transformation on an object. Lewin did this by defining a _generalized interval system_ (GIS). He defines it as follows:
 
-> A _Generalized Interval System_ (GIS) is an ordered triple $(S, {IVLS}, {int})$, where S, the _space_ of the GIS, is a family of elements, ${IVLS}$, the _group of intervals_ for the GIS, is a mathematical group, and ${int}$ is a function mapping $S \times S$ into ${IVLS}$, all subject to the two conditions (A) and (B) following.
+> A _Generalized Interval System_ (GIS) is an ordered triple $(S, \text{IVLS}, \text{int})$, where S, the _space_ of the GIS, is a family of elements, $\text{IVLS}$, the _group of intervals_ for the GIS, is a mathematical group, and $\text{int}$ is a function mapping $S \times S$ into $\text{IVLS}$, all subject to the two conditions (A) and (B) following.
 >
-> $\quad$(A): For all $r$, $s$, and $t$ in $S$, ${int}(r, s) \circ {int}(s, t) = {int}(r, t)$.
+> $\quad$(A): For all $r$, $s$, and $t$ in $S$, $\text{int}(r, s) \circ \text{int}(s, t) = \text{int}(r, t)$.
 >
-> $\quad$(B): For every $s$ in $S$ and every $i$ in ${IVLS}$, there is a unique $t$ in $S$ which lies [in] the interval $i$ from $s$, that is a unique $t$ which satisfies the equation ${int}(s, t) = i$ (Lewin, 1987, p. 26)
+> $\quad$(B): For every $s$ in $S$ and every $i$ in $\text{IVLS}$, there is a unique $t$ in $S$ which lies [in] the interval $i$ from $s$, that is a unique $t$ which satisfies the equation $\text{int}(s, t) = i$ (Lewin, 1987, p. 26)
 
-In simpler terms, a GIS contains a given musical space (e.g. a chromatic or diatonic scale), a group of intervals (this could be $\mathbb{Z}_{12}$ or something similar), and a function (which we call the interval function $int$) which maps our Cartesian Product $S \times S$ to the group of intervals.
+In simpler terms, a GIS contains a given musical space (e.g. a chromatic or diatonic scale), a group of intervals (this could be $\mathbb{Z}_{12}$ or something similar), and a function (which we call the interval function $\text{int}$) which maps our Cartesian Product $S \times S$ to the group of intervals.
 
 The conditions Lewin sets are very useful as they make our group into a [G-torsor](https://en.wikipedia.org/wiki/Principal_homogeneous_space), but we won't need to deal with that for today.
 
-Now that we have a basic understanding of what a GIS is, we can look at some examples. Let's consider a basic tonal example: our musical space shall be the C major scale. We'll then define the function $int : S \times S \to \mathbb{Z}_{7}$ such that $int(s,t)$ is the minimum number of scale steps going up from $s$ required to reach $t$. For example, we have $int(C, D) = 1$ and $int(C, G)=4$, while $int(F, D)=5$, not $-2$. It's not hard to prove that our group is closed under addition (I'll leave it as an exercise), and then it's easy to find our identity ($int(a, a)$) and inverse elements ($int(a, b) + int(b, a)$).
+Now that we have a basic understanding of what a GIS is, we can look at some examples. Let's consider a basic tonal example: our musical space shall be the C major scale. We'll then define the function $\text{int} : S \times S \to \mathbb{Z}_{7}$ such that $\text{int}(s,t)$ is the minimum number of scale steps going up from $s$ required to reach $t$. For example, we have $\text{int}(C, D) = 1$ and $\text{int}(C, G)=4$, while $\text{int}(F, D)=5$, not $-2$. It's not hard to prove that our group is closed under addition (I'll leave it as an exercise), and then it's easy to find our identity ($int(a, a)$) and inverse elements ($int(a, b) + int(b, a)$).
 
 ## Neo-Riemannian Analysis
 
