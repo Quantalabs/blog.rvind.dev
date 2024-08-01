@@ -36,11 +36,29 @@
   <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"
     integrity="sha384-43gviWU0YVjaDtb/GhzOouOXtZMP/7XUzwPTstBeZFe/+rCMvRwr4yROQP43s0Xk" crossorigin="anonymous"
     onload="renderMathInElement(document.body);"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      renderMathInElement(document.body, {
+        // customised options
+        // • auto-render specific keys, e.g.:
+        delimiters: [
+          {left: '$$', right: '$$', display: true},
+          {left: '$', right: '$', display: false},
+          {left: '\\(', right: '\\)', display: false},
+          {left: '\\[', right: '\\]', display: true}
+        ],
+        // • rendering keys, e.g.:
+        throwOnError: false
+      });
+    });
+  </script>
 
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/bitmaks/cm-web-fonts@latest/fonts.css">
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap');
     @import url('https://unpkg.com/marx-css/css/marx.min.css');
     @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css');
+    @import url('https://fonts.googleapis.com/css2?family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
     * {
       font-family: 'Inconsolata', monospace;
@@ -56,6 +74,20 @@
     strong {
       font-weight: 900 !important;
     }
+
+    em {
+      font-family: "Ubuntu Mono", monospace;
+      font-style: italic;
+    }
+
+    .vlist:has(span:empty):not(:has(:not(span:empty))) {
+      display: none !important;
+    }
+
+    .katex * {
+      font-family: "Computer Modern Serif";
+    }
+
 
     .greek {
       font-family: 'Source Code Pro', monospace;
@@ -76,6 +108,7 @@
     #nav-desk {
       float: left;
       width: 15vw;
+      position: fixed;
     }
 
     #content {
@@ -187,6 +220,10 @@
         --disabled: rgba(255, 255, 255, 0.38);
         --dividers: rgba(255, 255, 255, 0.12);
       }
+
+      .invert {
+        filter: invert(1);
+      }
     }
   </style>
 </head>
@@ -247,7 +284,7 @@
   </div>
 
   <script type="text/javascript" src="{{ get_url(path='elasticlunr.min.js') }}"></script>
-  <script type="text/javascript" src="{{ get_url(path='search.js') }}"></script>
+  <script type="text/javascript" src="{{ get_url(path='meta/search.js') }}"></script>
 </body>
 
 </html>
