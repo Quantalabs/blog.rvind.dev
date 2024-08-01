@@ -5,7 +5,7 @@ date = 2024-07-22
 +++
 
 > **Prerequisites**\
-> Knowledge of music theory might help, but is not required at all. However, this post uses group theory and set theory, so familiarizing yourself with those fields is encouraged before reading this piece.
+> This post uses group theory and set theory, so familiarizing yourself with those fields is encouraged before reading this piece. Additionally, I try to explain some basic music theory, but prior knowledge of western music theory will help tremendously in understanding this. [This video](https://youtu.be/XOT5-umjiHg?t=60) seems to cover most of what you need to know.
 
 ## Introduction
 
