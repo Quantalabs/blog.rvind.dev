@@ -48,7 +48,7 @@ Now that we have a scale, we can create chords. As we will see, chords are very 
 <p align="center">
 <midi-player src="/riemann/IVI.mid" sound-font> </midi-player></p>
 
-The \\(I\\) chord is built from the first 5 notes, using every other note starting with C (C, E, G). The \\(V\\) is built from the 5th note, using every other note for 3 notes (we repeat the scale once we pass C, so G, B, D). Similar to how we built those chords, we can build any other 3 note chord by using every other note. We call the intervals these chords are built from "thirds", and we call the chord a "triad".
+The \\(I\\) chord is built from the first 5 notes, using every other note starting with C (C, E, G). The \\(V\\) is built from the 5th note, using every other note for 3 notes (we repeat the scale once we pass C, so G, B, D). Similar to how we built those chords, we can build any other 3 note chord by using every other note. We call the intervals these chords are built from "thirds", and we call the chord a "triad". The triad is built off of the "root", and the second and third notes are called the third and fifth, respectively.
 
 <p style="text-align: center;" align="center" id="triads"></p>
 
