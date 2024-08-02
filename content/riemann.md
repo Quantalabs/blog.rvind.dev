@@ -114,7 +114,7 @@ Now that we have a basic understanding of what a GIS is, we can look at some exa
 
 So far, we've done a lot of abstract math/music theory with very little application. We know that we can model intervals as functions which can form groups, we have a very rigorous way to define these groups, but absolutely no idea how to apply it. For this, music theorists have created several branches of transformational theory, but for today, we'll use Neo-Riemannian Analysis. It's primarily used in analyzing traidic music, tonal or atonal.
 
-Considering most of the people who are reading this are primarily mathematicians or math enthusiasts, I should mention that Neo-Riemannian Analysis is not in fact named after the mathematician, but instead after the music theorist Hugo riemann, whose work focused on dualism (simply put, the idea that major and minor triads are opposites) and transformations. Lewin took riemann's transformations and abandoned dualism to apply transformational theory to music that used _triadic atonality_.
+Considering most of the people who are reading this are primarily mathematicians or math enthusiasts, I should mention that Neo-Riemannian Analysis is not in fact named after the mathematician, but instead after the music theorist Hugo Riemann, whose work focused on dualism (simply put, the idea that major and minor triads are opposites) and transformations. Lewin took riemann's transformations and abandoned dualism to apply transformational theory to music that used _triadic atonality_.
 
 Neo-Riemannian Theory defines three operations:
 
