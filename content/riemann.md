@@ -87,8 +87,8 @@ What are some properties of this transformation? We know:
 
 - We have a function $T_0$ that acts as if we never applied the function.
   $$T_0(k) = k$$
-- Applying $T_n$ and then $T_m$ is the same as applying $T_m$ and then $T_n$.
 - Applying $T_n$ and then $T_{-n}$ gives us the value we started with.
+- $T_{p}+(T_{q}+T+{r}) = (T_{p}+T_{q})+T_{r}$
 
 So we have an identity element, an inverse, and associativity: we have a group! Our group is isomorphic to the group $\mathbb{Z}_{12}$, or the cyclic group with 12 elements (0-11). We can use this to our advantage, and represent our group as numbers instead of note names. This helps us abstract away the irrelevant details like which key we are in, and focus on the transformations that we are applying. A common way of representing our group of notes is through a clock diagram like below (we'll use this to help visualize transformations later on):
 
@@ -112,9 +112,9 @@ Now that we have a basic understanding of what a GIS is, we can look at some exa
 
 ## Neo-Riemannian Analysis
 
-So far, we've done a lot of abstract math/music theory with very little application. We know that we can model intervals as functions which can form groups, we have a very rigorous way to define these groups, but absolutely no idea how to apply it. For this, music theorists have created several branches of transformational theory, but for today, we'll use Neo-Riemannian Analysis. It's primarily used in analyzing traidic music, tonal or atonal.
+So far, we've done a lot of abstract math/music theory with very little application. We know that we can model intervals as functions which can form groups, we have a very rigorous way to define these groups, but absolutely no idea how to apply it. For this, music theorists have created several branches of transformational theory, but for today, we'll use Neo-Riemannian Analysis. It's primarily used in analyzing triadic music, tonal or atonal.
 
-Considering most of the people who are reading this are primarily mathematicians or math enthusiasts, I should mention that Neo-Riemannian Analysis is not in fact named after the mathematician, but instead after the music theorist Hugo Riemann, whose work focused on dualism (simply put, the idea that major and minor triads are opposites) and transformations. Lewin took riemann's transformations and abandoned dualism to apply transformational theory to music that used _triadic atonality_.
+Considering most of the people who are reading this are primarily mathematicians or math enthusiasts, I should mention that Neo-Riemannian Analysis is not in fact named after the mathematician, but instead after the music theorist Hugo Riemann, whose work focused on dualism (simply put, the idea that major and minor triads are opposites) and transformations. Lewin took Riemann's transformations and abandoned dualism to apply transformational theory to music that used _triadic atonality_.
 
 Neo-Riemannian Theory defines three operations:
 
@@ -197,7 +197,7 @@ The Full Tonnetz
 
 #### Using the Tonnetz and Neo-Riemannian Analysis
 
-Finally, we can use all of the tools we've developed thus far to analyze a piece. Let's begin with an example from Radiohead: "Morning Bell". The following progression comes from the Bridge.
+Finally, we can use all the tools we've developed thus far to analyze a piece. Let's begin with an example from Radiohead: "Morning Bell". The following progression comes from the Bridge.
 
 <p style="text-align: center;" align="center" id="morningBell">
 <sub>You can hear the progression starting <a href="https://youtu.be/XTT6k3Q4JnQ?t=143">here</a> at 2:23 till 2:33.</sub>
@@ -212,7 +212,7 @@ We can understand this chord progression by viewing the path on a Tonnetz:
 The first 2 chords visualized on a Tonnetz
 </p>
 
-For the first two chords, we can see that they are separated by an $LP$ transformation. This $LP$ transformation is very common, and is often called a "chromatic mediant"[^3]. Chromatic mediants are quite useful to add color to a piece and it's harmonic motion.
+For the first two chords, we can see that they are separated by an $LP$ transformation. This $LP$ transformation is very common, and is often called a "chromatic mediant"[^3]. Chromatic mediants are quite useful to add color to a piece, and it's harmonic motion.
 
 We can also look at the transformation from G# minor to D major:
 
