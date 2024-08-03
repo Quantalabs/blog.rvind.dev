@@ -88,7 +88,7 @@ What are some properties of this transformation? We know:
 - We have a function $T_0$ that acts as if we never applied the function.
   $$T_0(k) = k$$
 - Applying $T_n$ and then $T_{-n}$ gives us the value we started with.
-- $T_{p}+(T_{q}+T+{r}) = (T_{p}+T_{q})+T_{r}$
+- $T_{p}+(T_{q}+T_{r}) = (T_{p}+T_{q})+T_{r}$
 
 So we have an identity element, an inverse, and associativity: we have a group! Our group is isomorphic to the group $\mathbb{Z}_{12}$, or the cyclic group with 12 elements (0-11). We can use this to our advantage, and represent our group as numbers instead of note names. This helps us abstract away the irrelevant details like which key we are in, and focus on the transformations that we are applying. A common way of representing our group of notes is through a clock diagram like below (we'll use this to help visualize transformations later on):
 
