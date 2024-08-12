@@ -1,6 +1,6 @@
 +++
 title = "Transformational Music Theory: A Mathematical Approach To Analyzing Music"
-description = "Combining set theory, group theory, and music theory."
+description = "Combining group theory and music theory."
 date = 2024-07-22
 +++
 
