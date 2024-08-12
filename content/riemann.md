@@ -9,18 +9,18 @@ date = 2024-07-22
 
 ## Introduction
 
-In the late 19th century, classical composers of the romantic era began to play around with a new type of sound, one astray from the common sound of the Western musical world. The composers took the dull blues and greens of the Western classical palette and added a bright kermes red, deep tyrian purple, and a glaucous blueish-green. The result was a new type of music for the Western world: atonal music.
+In the late 19th century, composers of the romantic era began to play around with a new type of sound, one astray from the common sound of the Western musical world. The composers took the dull blues and greens of the Western classical palette and added a bright kermes red, deep tyrian purple, and a glaucous blueish-green. They did this through the use of _chromaticism_ and _atonality_.
 
-Atonal music includes both the bold, assertive sound of [Schönberg](https://youtu.be/3bqlt1EOlwg) or [Stravinsky](https://youtu.be/EkwqPJZe8ms), and the dreamy, impressionistic sound of [Debussy](https://youtu.be/fe1pB9KqHRg) or [Ravel](https://youtu.be/Tzv1sDPmQ10). Broadly speaking, atonal music lacks a tonal center. This means, for the listener, the common feelings of tension and release in music are not there. Take for example the following musical passage; on the first chord, we feel at home. We then feel the tension grow as we go up, and feel it release as we go back home.
+Atonality is music which has no tonal center, i.e. atonal music sounds much different than music we might be used to. For example, take Schoenberg's [3 Klavierstücke, Op. 11: No. 1, Mäßige Viertel](https://www.youtube.com/watch?v=Nuevj2APlrM). Chromaticism sounds more familiar, and keeps a tonal center, but will use notes outside the key (see Debussy's [Prélude à l'aprés-midi d'un Faune](https://youtu.be/jlLoXvamfZw)) Both forms of composition, however, are used by composers to stray from the techniques of tonal music and tonality[^1].
 
 <p style="text-align: center;" align="center" id="IVI"></p>
 <p align="center">
 <midi-player src="/riemann/IVI.mid" sound-font> </midi-player>
 </p>
 
-This is an example of tonal music. Tonal music is music that is built off of some type of scale, which will imply a tonal center. The two most common ones are the major and minor scales. Using these scales, we can build chords using only the notes in the scale, such as those above. Using the notes of the scale helps keep our tonal center (the first note of the scale, or the root), and thus we are able to create feelings of tension by venturing away from the root and release by returning.
+This is an example of tonality. Tonal music is music that is built off of some type of scale, which will imply a tonal center. The two most common ones are the major and minor scales. Using these scales, we can build chords using only the notes in the scale, such as those above. Using the notes of the scale helps keep our tonal center (the first note of the scale, or the root), and thus we are able to create feelings of tension by venturing away from the root and release by returning.
 
-By straying from tonal music, the Late Romantic-era composers created music in which conventional methods of analysis could not work. This led to the creation of transformational theory, which instead of looking at musical objects in relation to the tonic, it viewed them in relation to each other. Instead of thinking of a \\(I-V\\) cadence (the first two chords from the snippet above), we think of a "Dominant operation". We look at the chords in context of the surrounding musical objects, i.e. we care less about the content of the chord itself and more about how we got to the chord and how we leave it.
+By venturing farther away from tonality, the Late Romantic-era composers created music in which conventional methods of analysis could not work. This led to the creation of transformational theory, which instead of looking at musical objects in relation to the tonic, it viewed them in relation to each other. Instead of thinking of a \\(I-V\\) cadence (the first two chords from the snippet above), we think of a "Dominant operation". We look at the chords in context of the surrounding musical objects, i.e. we care less about the content of the chord itself and more about how we got to the chord and how we leave it.
 
 ## Basic Music Theory
 
@@ -34,7 +34,7 @@ Of those twelve notes, we construct a 7-note scale called the major scale, which
 
 <p style="text-align: center;" align="center" id="diat"></p>
 
-We can create modes of this scale by altering which note we start on. Starting on C as above gives us a major scale, but if we start on the 6th degree, A, we get a minor scale.
+We can create modes of this scale by altering which note we start on. Starting on C as above gives us a major scale, but if we start on the 6th degree, A, we get an A minor scale.
 
 <p style="text-align: center;" align="center" id="aeolian"></p>
 
@@ -48,7 +48,7 @@ Now that we have a scale, we can create chords. As we will see, chords are very 
 <p align="center">
 <midi-player src="/riemann/IVI.mid" sound-font> </midi-player></p>
 
-The \\(I\\) chord is built from the first 5 notes, using every other note starting with C (C, E, G). The \\(V\\) is built from the 5th note, using every other note for 3 notes (we repeat the scale once we pass C, so G, B, D). Similar to how we built those chords, we can build any other 3 note chord by using every other note. We call the intervals these chords are built from "thirds", and we call the chord a "triad". The triad is built off of the "root", and the second and third notes are called the third and fifth, respectively.
+The \\(I\\) chord is built from the first, third, and fifth notes. The \\(V\\) chord is built from the fifth, seventh, and second notes (we wrap around the scale once we reach the end). Similar to how we built those chords, we can build any other 3 note chord by using every other note. We call the intervals these chords are built from "thirds", and we call the chord a "triad". The triad is built off of the "root", and the second and third notes are called the third and fifth, respectively.
 
 <p style="text-align: center;" align="center" id="triads"></p>
 
@@ -56,22 +56,24 @@ These triads contain two types of thirds: a major third, which has 3 notes in be
 
 <p style="text-align: center;" align="center" id="intervals"></p>
 
-Most of musical analysis before Transformational Theory (e.g. Schenkerian analysis), focused on relationships between these chords and the scale degrees they are built off of. For example, we could look at a piece and find the chords at different points. We can analyze why the piece might make us feel a certain way by looking at its motion harmonically, i.e. how it moves from chord to chord. For example, take the following passage from the opening phrase of _Tristan und Isolde_, by Richard Wagner.
+Most of musical analysis before Transformational Theory (e.g. Schenkerian analysis), focused on relationships between these chords and the scale degrees they are built off of. For example, we could look at a piece and find the chords at different points. We can analyze why the piece might make us feel a certain way by looking at its motion harmonically, i.e. how it moves from chord to chord. Let's analyze the following progression as an example.
 
-<p align='center'>
-  <img style="background-color: #ffffff;" class="invert" src="https://upload.wikimedia.org/score/4/1/41h3q7az5ei5mmex7wl1edpfx2xku68/41h3q7az.png" alt="A short phrase from the opera Tristan und Isolde"><br>
-  <audio controls>
-    <source src="https://upload.wikimedia.org/wikipedia/commons/5/5c/Wagner_Tristan_opening_%28orchestral%29.ogg" type="audio/ogg">
+<p style="text-align: center;" align="center" id="vi_ii_v_i">
+<img style="background-color: #ffffff;" class="invert" src="https://upload.wikimedia.org/score/a/i/aixpf4sdayajaqa6azwjq733bgff0cc/aixpf4sd.png"><br>
+<audio controls>
+    <source src="https://upload.wikimedia.org/score/a/i/aixpf4sdayajaqa6azwjq733bgff0cc/aixpf4sd.mp3" type="audio/mp3">
   </audio>
 </p>
 
-If one were to wonder why we feel the tension grow during this phrase, we could analyze it using our skills that we've developed so far. We already know the \\(I-V\\) cadence makes us feel lots of tension, so it's safe to assume that the \\(V\\) chord is a tense chord. Instead of thinking of a \\({Fr}^{+6}\\) chord like notated, we can think of it as a \\(IV\\) chord. The tension is growing because we're moving up, from \\(IV-V\\), and as such we feel more tension as we land on a \\\(V\\) chord, which is an already tense chord.
+If we wanted to understand why our progression feels so resolved, we can analyze this using everything we've learned so far. We end on a \\(I\\) chord, meaning that the last chord is built off of the tonal center, or tonic, of the scale/key. Understandably, other chords in this key will feel unresolved, but the final chord does not need to resolve- it is the resolution. We can also take this a step further, noting that the final two chords form a \\(V-I\\) cadence, commonly known as an authentic cadence. The authentic cadence is perhaps the most common sequence of chords in any form of western music. This is because the \\(V\\) chord has a lot of tension, and the \\(I\\) chord resolves all of the tension.
+
+There are more tools we can use to analyze this progression, but really, what we've covered so far is all you need to understand the music theory below.
 
 ## Transformational Theory
 
 Now that we have a basic grasp of conventional analysis, we can start to look at transformational theory and its math.
 
-Transformational theory ignores the key and chord we're on. It works by analyzing the relationship between any two chords rather than the chords themselves. As David Lewin writes in _Generalized Musical Intervals and Transformations_ (the foundational text of transformational theory), transformation theory asks "If I am at s and wish to get to t, what characteristic gesture should I perform in order to arrive there?" (159).
+Transformational theory ignores the key we're in and chord we're on. It works by analyzing the relationship between any two chords rather than the chords themselves. As David Lewin writes in _Generalized Musical Intervals and Transformations_ (the foundational text of transformational theory), transformation theory asks "If I am at s and wish to get to t, what characteristic gesture should I perform in order to arrive there?" (159).
 
 Let's take a look at an example. Say we see the following progression in a piece of music:
 
@@ -106,9 +108,9 @@ Now that we can define these transformations for a single note, let's see how we
 
 In simpler terms, a GIS contains a given musical space (e.g. a chromatic or diatonic scale), a group of intervals (this could be $\mathbb{Z}_{12}$ or something similar), and a function (which we call the interval function $\text{int}$) which maps our Cartesian Product $S \times S$ to the group of intervals.
 
-The conditions Lewin sets are very useful as they make our group into a [G-torsor](https://en.wikipedia.org/wiki/Principal_homogeneous_space), but we won't need to deal with that for today.
+The conditions Lewin sets are very useful as they make our group into a [G-torsor](https://en.wikipedia.org/wiki/Principal_homogeneous_space), but if you have no idea what that is, don't worry, we won't need to deal with that for today.
 
-Now that we have a basic understanding of what a GIS is, we can look at some examples. Let's consider a basic tonal example: our musical space shall be the C major scale. We'll then define the function $\text{int} : S \times S \to \mathbb{Z}_{7}$ such that $\text{int}(s,t)$ is the minimum number of scale steps going up from $s$ required to reach $t$. For example, we have $\text{int}(C, D) = 1$ and $\text{int}(C, G)=4$, while $\text{int}(F, D)=5$, not $-2$. It's not hard to prove that our group is closed under addition (I'll leave it as an exercise), and then it's easy to find our identity ($int(a, a)$) and inverse elements ($int(a, b) + int(b, a)$).
+Now that we have a basic understanding of what a GIS is, we can look at some examples. Let's consider a basic tonal example: our musical space shall be the C major scale. We'll then define the function $\text{int} : S \times S \to \mathbb{Z}_{7}$ such that $\text{int}(s,t)$ is the minimum number of scale steps going up from $s$ required to reach $t$. For example, we have $\text{int}(C, D) = 1$ and $\text{int}(C, G)=4$, while $\text{int}(F, D)=5$, not $-2$. It's easy to find our identity ($int(a, a)$) and inverse elements ($int(a, b) + int(b, a)$).
 
 ## Neo-Riemannian Analysis
 
@@ -167,7 +169,7 @@ In summary, our musical space consists of major and minor chords, which we notat
 
 #### The Tonnetz
 
-Before we get to applying these transformations to a piece of music, it can help to visualize our musical space. For that we turn to the Tonnetz[^1]. The Tonnetz provides a way to visualize our triads and the transformations in our space. Let's begin by picking a single triad, we'll use a C major triad, and finding a geometric representation. Our triad has 3 notes, so a triangle is the most obvious choice.
+Before we get to applying these transformations to a piece of music, it can help to visualize our musical space. For that we turn to the Tonnetz[^2]. The Tonnetz provides a way to visualize our triads and the transformations in our space. Let's begin by picking a single triad, we'll use a C major triad, and finding a geometric representation. Our triad has 3 notes, so a triangle is the most obvious choice.
 
 <p align="center">
 <img class="invert" src="/riemann/triad.svg" style="background-color:transparent;object-fit: cover;height: 330px;width:210px;"></img><br>
@@ -203,7 +205,7 @@ Finally, we can use all the tools we've developed thus far to analyze a piece. L
 <sub>You can hear the progression starting <a href="https://youtu.be/XTT6k3Q4JnQ?t=143">here</a> at 2:23 till 2:33.</sub>
 </p>
 
-The progression is very hard to analyze functionally, particularly because our "key" is A major, but that makes chords like the G# Minor and A minor particularly hard to explain[^2].
+The progression is very hard to analyze functionally, particularly because our "key" is A major, but that makes chords like the G# Minor and A minor particularly hard to explain[^3].
 
 We can understand this chord progression by viewing the path on a Tonnetz:
 
@@ -212,7 +214,7 @@ We can understand this chord progression by viewing the path on a Tonnetz:
 The first 2 chords visualized on a Tonnetz
 </p>
 
-For the first two chords, we can see that they are separated by an $LP$ transformation. This $LP$ transformation is very common, and is often called a "chromatic mediant"[^3]. Chromatic mediants are quite useful to add color to a piece, and it's harmonic motion.
+For the first two chords, we can see that they are separated by an $LP$ transformation. This $LP$ transformation is very common, and is often called a "chromatic mediant"[^4]. Chromatic mediants are quite useful to add color to a piece, and it's harmonic motion.
 
 We can also look at the transformation from G# minor to D major:
 
@@ -240,17 +242,19 @@ This might seem completely different that the progression from earlier, however,
 
 We get the same progression!
 
-Using a combination of $PLR$ operations and $T$ operations[^4] can help you uncover patterns in pieces of music. Analyzing music is helpful not only for musicians, but also for listeners. Understanding what is going on in the music you listen to, even if it's at a high level, can help you better appreciate the music.
+Using a combination of $PLR$ operations and $T$ operations[^5] can help you uncover patterns in pieces of music. Analyzing music is helpful not only for musicians, but also for listeners. Understanding what is going on in the music you listen to, even if it's at a high level, can help you better appreciate the music.
 
 ---
 
-[^1]: Many mathematicians joke that we name everything after the second person who discovered something, because Euler discovered it first. The Tonnetz might not be named after anyone, but it was created by Euler as well.
+[^1]: If none of that made sense, that's fine. I'll define most of those terms much more rigorously in the next section.
 
-[^2]: We could also think of the piece as being in A minor, but then the G# minor and A major chords are hard to explain.
+[^2]: Many mathematicians joke that we name everything after the second person who discovered something, because Euler discovered it first. The Tonnetz might not be named after anyone, but it was created by Euler as well.
 
-[^3]: Chromatic mediants can also be found through other transformations. $PR$, $PL$, and $RP$ can also transform a chord into one of its chromatic mediants.
+[^3]: We could also think of the piece as being in A minor, but then the G# minor and A major chords are hard to explain.
 
-[^4]: We didn't talk about $I$ operations (inversions) in this post, but together with $T$ operations, it forms the T/I-group, which is just as important as the PLR group. You can read about them (along with some other important information) [here](https://www-personal.umd.umich.edu/~tmfiore/1/mathmusiccolloquiumslides.pdf).
+[^4]: Chromatic mediants can also be found through other transformations. $PR$, $PL$, and $RP$ can also transform a chord into one of its chromatic mediants.
+
+[^5]: We didn't talk about $I$ operations (inversions) in this post, but together with $T$ operations, it forms the T/I-group, which is just as important as the PLR group. You can read about them (along with some other important information) [here](https://www-personal.umd.umich.edu/~tmfiore/1/mathmusiccolloquiumslides.pdf).
 
 <script src="https://cdn.jsdelivr.net/npm/vexflow@4.2.2/build/cjs/vexflow.js"></script>
 <script src="https://cdn.jsdelivr.net/combine/npm/tone@14.7.58,npm/@magenta/music@1.23.1/es6/core.js,npm/focus-visible@5,npm/html-midi-player@1.5.0"></script>
