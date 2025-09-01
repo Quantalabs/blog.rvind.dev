@@ -4,7 +4,7 @@
 <h1 class="title">
     {{ page.title }}
 </h1>
-<p class="subtitle">{{ page.description }} | {{ page.date | date(format="%B %d, %Y") }}</p>
+<p class="subtitle">{{ page.description }} | {{ page.date | date(format="%B %d, %Y") }} | {{ page.word_count }} words, {{ page.reading_time }} min</p>
 <hr>
 {% if page.toc %}
 <h4>Table of Contents</h4>

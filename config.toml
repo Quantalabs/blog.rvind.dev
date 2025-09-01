@@ -5,7 +5,7 @@ generate_feeds = true
 title = "Tangents"
 description = "A blog on computer science, mathematics, music, and various other things."
 
-author = "npm.quantalabs@gmail.com (Arvind Venkatesh)"
+author = "contact@rvind.dev (Arvind Venkatesh)"
 
 feed_filenames = ["rss.xml"]
 
