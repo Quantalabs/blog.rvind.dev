@@ -240,21 +240,18 @@
         }
       }
 
+      a {
+        color: #1d7484 !important;
+      }
+
+      a:hover {
+        color: #982c61 !important;
+        border-bottom: 2px solid #4a4a4a;
+      }
+
       /* Dark mode */
       @media (prefers-color-scheme: dark) {
         :root {
-          --primary-400: #fac35f;
-          --primary: #f5b83b;
-          --primary-600: #ebaf26;
-          --accent: #ff8a63;
-          --grey: #faf9f7;
-          --white: #000000;
-          --black: #ffffff;
-
-          --text: rgba(255, 255, 255, 0.8);
-          --secondary: rgba(255, 255, 255, 0.54);
-          --disabled: rgba(255, 255, 255, 0.38);
-          --dividers: rgba(255, 255, 255, 0.12);
           --color-bg: #222222;
         }
 
@@ -280,7 +277,7 @@
           <h2><span class="greek">τ</span>angents</h2>
           <p>
             by
-            <a href="https://a.rvind.dev" style="color: black; font-weight: 500"
+            <a href="https://a.rvind.dev" style="color: var(--black); font-weight: 500"
               >Arvind Venkatesh</a
             >
           </p>

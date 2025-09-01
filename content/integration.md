@@ -14,7 +14,7 @@ I want to begin by motivating this change in intuition by showing one of the top
 
 > Determine the volume of the solid obtained by rotating the region bounded by $y=x^2, x=1,x=3,$ and the $x$-axis, about the $x$-axis.
 
-![Graph of x squared](/integration/graph1.svg)
+<img class="invert" src="/integration/graph1.svg">
 
 Thinking of integrals as area under the curve, it's hard to think about how to approach this intuitively. I was taught that we should integrate a function that outputs the area of the circle with radius $x^2$. That way, the area under this new function is the sum of all of these little circles, giving us our solid. In this case, our integral may look like:
 
@@ -36,7 +36,7 @@ Let's begin by answering the first question, which gives us a nice way of lookin
 
 Here's a visual example:
 
-<iframe src="/integration/graph2.html" width="100%" height="400px" style="border:0;"></iframe>
+<iframe class="invert" src="/integration/graph2.html" width="100%" height="400px" style="border:0;"></iframe>
 
 Here you can see a function and it's antiderivative on the right. As you can see, the height of the rectangles on the left, which approximates the area, are very close to the change in $y$ on the right. It's not exact, but it gives us a visual understanding of why the area under the curve is related to the change in the antiderivative.
 

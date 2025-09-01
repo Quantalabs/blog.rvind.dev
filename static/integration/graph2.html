@@ -109,22 +109,32 @@
 				ctx.stroke();
 				ctx2.stroke();
 
-				ctx.fillStyle = "rgba(0, 0, 255, 0.5)";
-				ctx2.fillStyle = "rgba(0, 0, 255, 0.5)";
-				ctx2.strokeStyle = "rgba(0, 0, 255, 0.5)";
+				ctx.fillStyle = "#1e66f5";
+				ctx2.fillStyle = "#1e66f5";
+				ctx2.strokeStyle = "#000000";
 					
 				lasty = F(3);
 				for (let x = 3; x < 7; x += dx) {
 					ctx.fillRect(x * xscale, 0, dx * xscale, f(x) * yscale);
-					ctx2.fillRect(3*xscale, lasty*antideriv_yscale, dx*xscale, f(x) * yscale);
+					ctx2.fillRect((x-0.35)*xscale, lasty*antideriv_yscale, dx*xscale, f(x) * yscale);
+					ctx2.strokeRect(2.65*xscale, lasty*antideriv_yscale, dx*xscale, f(x) * yscale);
 					lasty = lasty + f(x);
 				}
 
 				ctx2.beginPath();
 				ctx2.moveTo(3 * xscale, lasty * antideriv_yscale);
-				ctx2.lineTo(6.75 * xscale, lasty * antideriv_yscale);
-				ctx2.lineTo(6.75 * xscale, 0);
+				ctx2.lineTo(6.65 * xscale, lasty * antideriv_yscale);
+				ctx2.lineTo(6.65 * xscale, 0);
 				ctx2.stroke();
+
+				ctx.scale(1, -1);
+				ctx2.scale(1, -1);
+				ctx.fillText("3", 3 * xscale - 5, 15);
+				ctx.fillText("7", 7 * xscale - 5, 15);
+				ctx2.fillText("3", 3 * xscale - 5, 15);
+				ctx2.fillText("7", 6.65 * xscale - 5, 15);
+				ctx.scale(1, -1);
+				ctx2.scale(1, -1);
 			}
 
             // Initial graph rendering
