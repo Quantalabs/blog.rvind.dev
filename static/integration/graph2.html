@@ -109,12 +109,16 @@
 				ctx.stroke();
 				ctx2.stroke();
 
-				ctx.fillStyle = "#1e66f5";
-				ctx2.fillStyle = "#1e66f5";
 				ctx2.strokeStyle = "#000000";
+
+				let colors = ["#E8A548", "#48E874", "#9048E8"]
 			
 				lasty = F(min);
 				for (let x = min; x < max; x += dx) {
+					let color = colors[x % colors.length];
+					ctx.fillStyle = color;
+					ctx2.fillStyle = color;
+						
 					for (let i = 0; i < f(x); i++) {
 						ctx.fillRect(x*xscale, i*yscale, dx*xscale, yscale);
 						ctx2.fillRect(x*xscale, (lasty+i)*yscale, dx*xscale, yscale);
@@ -124,15 +128,6 @@
 					}
 					lasty = lasty + Math.floor(f(x))
 				}
-
-				ctx.scale(1, -1);
-				ctx2.scale(1, -1);
-				ctx.fillText("x_1", min * xscale - 5, 15);
-				ctx.fillText("x_2", max * xscale - 5, 15);
-				ctx2.fillText("x_1", min * xscale - 5, 15);
-				ctx2.fillText("x_2", max * xscale - 5, 15);
-				ctx.scale(1, -1);
-				ctx2.scale(1, -1);
 			}
 
 			let dx = document.getElementById("dx")

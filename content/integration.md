@@ -4,21 +4,25 @@ description = "Other ways of thinking about definite integration."
 date = 2025-07-14
 +++
 
-In most textbooks, definite integration is defined as producing the "area under the curve" of a given function. While this definition is true, thinking about integration only in terms of area is an oversimplification of the power of integration. Furthermore, the definition can become a barrier to understanding why we use integration in other contexts, such as for volume and arc length. Thus, in this post, I'd like to go over other ways of thinking about definite integration and the applications of definite integration in other contexts.
+In most textbooks, definite integration is defined as the operator yielding the "area under the curve" of a given function. While this definition is correct, thinking about integration only in terms of area is an oversimplification and can become a barrier to understanding why we use integration in other contexts, such as in determinations of volume and arc length. Thus, in this post, I'd like to discuss other ways of thinking about definite integration with the aim of facilitating a more intuitive understanding of definite integration in other contexts.
 
 ## Solids of Revolution
 
-I want to begin by providing motivation for the change in intuition. To do this, I will use a topic that I saw many classmates struggle with: rotational solids. A problem may ask,
+I want to begin by providing some background and motivation for such an approach and will use a topic that I saw many classmates struggle with: rotational solids. A problem may ask,
 
-> **Example 1.1:** Determine the volume of the solid obtained by rotating the region bounded by $y=x^2, x=1,x=3,$ and the $x$-axis, about the $x$-axis.
+> **Example 1.1:** Determine the volume of the solid obtained by rotating the region bounded by $f(x)=x^2, x=1,x=3,$ and the $x$-axis, about the $x$-axis.
 
 <img class="invert" src="/integration/graph1.svg">
 
-If we view integrals as simply giving us the area under a given function, then approaching **(1.1)** intuitively becomes harder. Since integrals give us area, not volume, we should begin by finding a way to translate the problem into 2 dimensions. Rotating a single point on our graph would give us a circle, so what if we integrate a function that gives the area of the circle for each point on our graph? The area of a circle is $\pi r^2$, so what is $r$? In this case, $r$ would have to be the $y$ value, or $x^2$. By letting $r=x^2$, we make our function output the area of the circle that we obtained by rotating our point on the graph.
+If we view integrals as simply giving us the area under a given function, then developing an intuitive understanding of example **(1.1)** is less obvious. Since integrals give us area, not volume, we should begin by finding a way to translate the problem into 2 dimensions. We start with the observation that rotating a single point $(x, f(x))$ on our graph about the $x$-axis would yield a circle of area $\pi f(x)^2$. Therefore, to determine the volume $V$, we look for a function $g(x)$ that, at a point $x$, yields the area of a circle passing through $x$, centered at point $(x,0)$ on the $x$-axis. Under the traditional definition, therefore, integrating $g(x)$ will yield the "area under the curve" of $g(x)$, which is the volume, $V$.
 
-$$ V=\int_{x_1}^{x_2} \pi r^2 dx =\pi \int_{1}^{3} (x^2)^2 dx $$
+$$ V=\int_{x_1}^{x_2} \pi f(x)^2 dx =\pi \int_{1}^{3} (x^4) dx $$
 
-This method, albeit lengthy, works fine for this case, so let's see how we can use it on a harder problem.
+We can evaluate this expression using the antiderivative[^1] of $x^4$:
+
+$$ V = [\frac{x^5}{5}]_{1}^{3} = \frac{242}{5} $$
+
+This method, while not intuitive, can be used to explain derivations of volume, but introduces complexities very quickly as we move to more advanced problems such as **(1.2)** below.
 
 > **Example 1.2** Determine the volume of a solid whose base is the region contained by $y=(9-x^2)^{1/2}$,$x=1$, $x=3$, and $y=0$, and has cross-sections perpendicular to the $x$-axis that are equilateral triangles.
 
@@ -26,14 +30,14 @@ This method, albeit lengthy, works fine for this case, so let's see how we can u
 
 With **(1.1)**, we translated our problem into 2 dimensions first. Let's do that again. With one point, it's $y$-value becomes the length of the base of an equilateral triangle. So, we should integrate a function that gives us the area of these equilateral triangles. In this case, that function would be $\frac{\sqrt 3}{4} s^2$, where $s$ becomes $y=\sqrt{9-x^2}$.
 
-But what if we're looking at $y=10x$ as a boundary instead of $y=0$? What about if we rotated around the $y$-axis? Although thinking about "area under the curve" works, constantly translating between 2-D and 3-D is a headache and a barrier to a deeper understanding.
-
-There exist other issues with this definition that I've seen other students struggle with, which will be the focus of the rest of this post. Namely, 
-1. Why does the *antiderivative* give us the *area*? Why should they be related?[^1]
-2. What do those $dx$ and $dy$ terms at the end really mean?
-3. Why do we use an integral, an area function, to find the length of a curve?
+Despite already having more complexities, **(1.2)** can get harder. For example, change the boundary from $y=0$ to $y=10x$, and rotate about the $y$-axis. Although thinking about "area under the curve" works, constantly translating between 2-D and 3-D is a headache and a barrier to a deeper understanding.
 
 ## Intuition for Definite Integration
+
+There exist other issues with this definition that I've seen other students struggle with, which will be the focus of the rest of this post. Namely, 
+1. Why does the change in the *antiderivative* give us the *area*, and why should the antiderivate be related to area at all?
+2. Why do we need a differential (e.g. $dx$) at the end of the integral?
+3. After learning about integration, students also learn about calculation of arc length. Since arc length can sometimes be taught as a formula to memorize, many ask, why do we use an integral, which should output area, to find the length of a curve? 
 
 The answer to our first question also gives us a new way of approaching integration.
 
@@ -43,13 +47,13 @@ Here's a visual example:
 
 Here, we can see a linear function on the left, and its antiderivative on the right. The regions and functions in the graphs are unimportant, we can pick any region or function. What we care about is the relationship between the area of the the function and the change in the antiderivative. We notice that the change in the antiderivative is very close to the sum of the heights of the boxes.
 
- Visually, we can think about the diagram another way: the graph is of a quadratic function (on the right) and it's derivative (on the left). Now, this relationship makes more sense. The height at any one point on a derivative, $f'(x)$, is defined to be the instantaneous rate of change of $f(x)$. Conversely, the height at any one point on a function, must be the instantaneous rate of change of the function's antiderivatives. What this means is that if we make thinner boxes, the area of the function becomes closer to the actual change in the antiderivative!
+ Visually, we can think about the diagram another way: the graph is of a quadratic function (on the right) and it's derivative (on the left). Now, this relationship makes more sense. The height at any one point on a derivative, $f'(x)$, is defined to be the instantaneous rate of change of $f(x)$. Conversely, the height at any one point on a function, $f'(x)$, must be the instantaneous rate of change of an antiderivative, $f(x)$. What this means is that if we make thinner boxes, the area of the function becomes closer to the actual change in the antiderivative! In other words, we are looking at the limit as $dx \to 0$.
 
-We can also approach the diagram algebraically, and answer the second question. Let's call the function on the left $f(x)$, and the width of each box $dx$. If we are trying to find the area of this function, we should sum up the areas of the boxes for a very small value of $dx$. This is adding up the values of $f(x) \times dx$ for several $x$ values. Also note, however, that $f(x)$ is the derivative of the function on the right, which we can call $y$, which means that we can instead write $dy/dx$ instead of $f(x)$. This means, the area is $\frac{dy}{dx} \times dx = dy$, added up for each $x$-value. Remember how we write the expression in an integral as $f(x) dx$? The $dx$ is "multiplied" by $f(x)$, and we can just measure the change in our antiderivative to calculuate this sum! 
+ Thus, the diagram leads us to a new way of thinking of integration. As $dx$ gets closer to 0, our integral beomes more and more like a sum. Therefore, we may think of the integral as a sum, which adds up a continuous set of values. Using a sum also means that when the input is a function, the output is the area.
 
-So how does this let us think of integration in a new way? If the $dx$ is “multiplied” by $f(x)$, then we can think of the entire integral as a sum rather than an area function. As $dx$ gets closer and closer to 0, we really are just adding up all the values of $f(x)$ at each point, which is why we can find the area of a given function.
+We can also approach the diagram algebraically, and answer the second question. Let's call the function on the left $f(x)$, and the width of each box $dx$. If we are trying to find the area of this function, we should sum up the areas of the boxes for a very small value of $dx$. This is adding up the values of $f(x) \times dx$ for several $x$ values. Also note, however, that $f(x)$ is the derivative of the function on the right, which we can call $y$, which means that we can instead write $dy/dx$ instead of $f(x)$. This means, the area is $\frac{dy}{dx} \times dx = dy$, added up for each $x$-value. If we write the expression in an integral as $f(x) dx$, then the $dx$ is "multiplied" by $f(x)$, and we can just measure the change in our antiderivative to calculuate this sum! 
 
-But this means that we can also use integrals any time we try to add up a lot of different continuous values. Let's revisit the problem about solids of revolution:
+Our new definition means that we can also use integrals any time we try to add up a lot of different continuous values. Let's revisit the problem about solids of revolution:
 
 > **Example 1.2** Determine the volume of a solid whose base is the region contained by $y=(9-x^2)^{1/2}$,$x=1$, $x=3$, and $y=0$, and has cross-sections perpendicular to the $x$-axis that are equilateral triangles.
 
