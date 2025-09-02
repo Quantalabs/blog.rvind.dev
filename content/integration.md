@@ -14,9 +14,9 @@ I want to begin by providing some background and motivation for such an approach
 
 <img class="invert" src="/integration/graph1.svg">
 
-If we view integrals as simply giving us the area under a given function, then developing an intuitive understanding of example **(1.1)** is less obvious. Since integrals give us area, not volume, we should begin by finding a way to translate the problem into 2 dimensions. We start with the observation that rotating a single point $(x, f(x))$ on our graph about the $x$-axis would yield a circle of area $\pi f(x)^2$. Therefore, to determine the volume $V$, we look for a function $g(x)$ that, at a point $x$, yields the area of a circle passing through $x$, centered at point $(x,0)$ on the $x$-axis. Under the traditional definition, therefore, integrating $g(x)$ will yield the "area under the curve" of $g(x)$, which is the volume, $V$.
+If we view integrals as simply giving us the area under a given function, then developing an intuitive understanding of example **(1.1)** is less obvious. Since integrals give us area, not volume, we should begin by finding a way to translate the problem into 2 dimensions. We start with the observation that rotating a single point $(x_i,y_i)$ on our graph about the $x$-axis would yield a circle of area $\pi y_i^2$. Therefore, to determine the volume $V$, we look for a function $g(x)$ that, at a point $x$, yields the area of a circle passing through $x$, centered at point $(x,0)$ on the $x$-axis. Under the traditional definition, therefore, integrating $g(x)$ will yield the "area under the curve" of $g(x)$, which is the volume, $V$.
 
-$$ V=\int_{x_1}^{x_2} \pi f(x)^2 dx =\pi \int_{1}^{3} (x^4) dx $$
+$$ V=\int_{x_1}^{x_2} \pi y^2 dx =\pi \int_{1}^{3} (x^4) dx $$
 
 We can evaluate this expression using the antiderivative[^1] of $x^4$:
 
@@ -27,10 +27,11 @@ This method, while not intuitive, can be used to explain derivations of volume, 
 > **Example 1.2** Determine the volume of a solid whose base is the region contained by $y=(9-x^2)^{1/2}$,$x=1$, $x=3$, and $y=0$, and has cross-sections perpendicular to the $x$-axis that are equilateral triangles.
 
 <img class="invert" src="/integration/graph1.2.svg">
+<img class="invert" src="/integration/graph1.2.2.png">
 
 With **(1.1)**, we translated our problem into 2 dimensions first. Let's do that again. With one point, it's $y$-value becomes the length of the base of an equilateral triangle. So, we should integrate a function that gives us the area of these equilateral triangles. In this case, that function would be $\frac{\sqrt 3}{4} s^2$, where $s$ becomes $y=\sqrt{9-x^2}$.
 
-Despite already having more complexities, **(1.2)** can get harder. For example, change the boundary from $y=0$ to $y=10x$, and rotate about the $y$-axis. Although thinking about "area under the curve" works, constantly translating between 2-D and 3-D is a headache and a barrier to a deeper understanding.
+Despite already having more complexities, **(1.2)** can get harder. For example, one could change the boundary from $y=0$ to $y=10x$, and rotate about the $y$-axis, resulting in an even less intuitive problem. Although thinking about "area under the curve" works, constantly translating between 2-D and 3-D is a barrier to a deeper understanding.
 
 ## Intuition for Definite Integration
 
