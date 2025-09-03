@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Visualization of Derivation</title>
+		<style>
+    		@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap');
+
+			#inputs {
+				display: flex;
+				flex-direction: row;
+				align-items: center;
+				justify-content: center;
+				width: 100%;
+			}
+
+			#charts {
+				display: flex;
+				flex-direction: row;
+				align-items: center;
+				justify-content: center;
+				border: 3px solid black;
+				margin: 0 auto;
+				width: 600px;
+			}
+
+			body {
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				justify-content: center;
+      			font-family: 'Inconsolata', monospace;
+				color: #333;
+				height: 100vh;
+				margin: 0;;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="charts">
+			<canvas
+				style="border-right: 3px solid black"
+				id="chart"
+				width="300"
+				,
+				height="300"
+				>Your browser doesn't support the canvas :(</canvas
+			>
+			<canvas id="antideriv" width="300" , height="300"
+				>Your browser doesn't support the canvas :(</canvas
+			>
+		</div>
+		<script>
+			let c = document.getElementById("chart");
+			let c2 = document.getElementById("antideriv");
+			let ctx = c.getContext("2d");
+			let ctx2 = c2.getContext("2d");
+
+			// Origin should be on the bottom left, but 10px padding is added
+			ctx.translate(30, 270);
+			ctx2.translate(30, 270);
+			ctx.scale(1, -1);
+			ctx2.scale(1, -1);
+
+			ctx.lineWidth = 1.5;
+			ctx2.lineWidth = 1.5;
+
+			function y(x) {
+				return x-2
+			}
+
+			function antideriv_y(x) {
+				return (x**2)/2 - 2 * x + 2;
+			}
+
+			function graph(dx, f, F, min, max) {
+				ctx.clearRect(-30, -30, c.width, c.height);
+				ctx2.clearRect(-30, -30, c2.width, c2.height);
+
+				// Draw axes
+				ctx.beginPath();
+				ctx.moveTo(0, 0);
+				ctx.lineTo(c.width, 0);
+				ctx.moveTo(0, 0);
+				ctx.lineTo(0, c.height);
+				ctx.stroke();
+
+				ctx2.beginPath();
+				ctx2.moveTo(0, 0);
+				ctx2.lineTo(c2.width, 0);
+				ctx2.moveTo(0, 0);
+				ctx2.lineTo(0, c2.height);
+				ctx2.stroke();
+
+				let xscale = (c.width - 30) / 10;
+				let yscale = (c2.height - 30) / 10;
+				let antideriv_yscale = (c2.height - 30) / 10;
+
+				// Draw f and F(x), but 1 unit is 1/10 of the canvas width
+				ctx.beginPath();
+				ctx.moveTo(0, f(0) * yscale);
+				ctx2.beginPath();
+				ctx2.moveTo(0, F(0) * antideriv_yscale);
+				for (let x = 0; x < 10; x += 0.01) {
+					ctx.lineTo(x * xscale, f(x) * yscale);
+					ctx2.lineTo(x * xscale, F(x) * antideriv_yscale);
+				}
+				ctx.stroke();
+				ctx2.stroke();
+
+				ctx2.strokeStyle = "#000000";
+
+				let colors = ["#E8A548", "#48E874", "#9048E8"]
+			
+				lasty = F(min);
+				for (let x = min; x < max; x += dx) {
+					let color = colors[x % colors.length];
+					ctx.fillStyle = color;
+					ctx2.fillStyle = color;
+						
+					for (let i = 0; i < f(x); i++) {
+						ctx.fillRect(x*xscale, i*yscale, dx*xscale, yscale);
+						ctx2.fillRect(x*xscale, (lasty+i)*yscale, dx*xscale, yscale);
+
+						ctx.strokeRect(x*xscale, i*yscale, dx*xscale, yscale);
+						ctx2.strokeRect(x*xscale, (lasty+i)*yscale, dx*xscale, yscale);
+					}
+					lasty = lasty + Math.floor(f(x))
+				}
+			}
+
+			let dx = document.getElementById("dx")
+
+      // Initial graph rendering
+      graph(1, y, antideriv_y, 3, 6);
+
+//			dx.addEventListener("input", () => graph(Number(dx.value), y, antideriv_y, 3, 6));
+		</script>
+	</body>
+</html>
