@@ -6,7 +6,7 @@
 </h1>
 <p class="subtitle">{{ page.description }} | {{ page.date | date(format="%B %d, %Y") }} | {{ page.word_count }} words, {{ page.reading_time }} min</p>
 <hr>
-{% if page.toc %}
+{% if page.toc and page.extra.displayToc != false %}
 <h4>Table of Contents</h4>
 <ol>
     {% for h1 in page.toc %}
@@ -34,6 +34,9 @@
     {% endfor %}
 </ol>
 <hr>
+{% endif %}
+{% if page.extra.displayToc == false %}
+<br>
 {% endif %}
 
 {{ page.content | safe }}

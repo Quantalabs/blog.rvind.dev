@@ -2,6 +2,9 @@
 title = "Transformational Music Theory: A Mathematical Approach To Analyzing Music"
 description = "Combining group theory and music theory."
 date = 2024-07-22
+
+[extra]
+displayToc = true
 +++
 
 > **Prerequisites**\
